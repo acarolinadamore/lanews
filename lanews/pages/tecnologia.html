@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>LANEWS Notícias</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    </head>
+    <body>
+        <header>
+                <div class="logo-container">
+                  <a href="../index.html" ><img class="logo" src="../assets/LANEWS.svg" alt="logo"></a>
+                </div>
+                <nav class="menu">
+                      <ul>
+                          <li><a href="../index.html">Últimas Notícias</a></li>
+                          <li><a href="#tecnologia">Tecnologia</a></li>
+                          <li><a href="#games">Games</a></li>
+                          <li><a href="#economia">Economia</a></li>
+                          </li>
+                          <li><a href="#esportes">Esportes</a></li>
+                      </ul>
+                </nav>
+        </header>
+        <main>
+          <section class="news-cards-container">
+              <div class="news-cards">
+                <div class="news-card">
+                  <div class="card">
+                    <div class="news-image">
+                      <img src="../assets/noticia-1.jpg" alt="Imagem 1">
+                    </div>
+                    <div class="card-content">
+                      <h3>Rússia é a economia que mais cresce na Europa</h3>
+                      <p>Por que a economia da Rússia cresce mais que a do G7 apesar da guerra na Ucrânia</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-card">
+                  <div class="card">
+                    <div class="news-image">
+                      <img src="../assets/noticia-2.jpg" alt="Imagem 2">
+                    </div>
+                    <div class="card-content">
+                      <h3>O 'sonho dourado'</h3>
+                      <p>Por que empregos nas gigantes de tecnologia perderam o encanto na atualidade</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-card">
+                  <div class="card">
+                    <div class="news-image">
+                      <img src="../assets/noticia-3.jpg" alt="Imagem 2">
+                    </div>
+                    <div class="card-content">
+                      <h3>Final da Copa do Mundo: veja onde assistir Brasil x Italia</h3>
+                      <p>Final da Copa do Mundo de Futebol de Areia acontece neste domingo (25), em Dubai, nos Emirados Árabes Unidos</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-card">
+                  <div class="card">
+                    <div class="news-image">
+                      <img src="../assets/noticia-4.jpg" alt="Imagem 2">
+                    </div>
+                    <div class="card-content">
+                      <h3>WhatsApp é a plataforma preferida dos golpistas</h3>
+                      <p>Como detectar golpes com ofertas falsas de emprego no WhatsApp e o que fazer para evitá-las</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-card">
+                  <div class="card">
+                    <div class="news-image">
+                      <img src="../assets/noticia-5.jpg" alt="Imagem 2">
+                    </div>
+                    <div class="card-content">
+                      <h3>A expansão da Shein e seus desafios</h3>
+                      <p>Os problemas legais da Shein, a gigante chinesa da moda que avança no Brasil</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-card">
+                  <div class="card">
+                    <div class="news-image">
+                      <img src="../assets/noticia-6.jpg" alt="Imagem 2">
+                    </div>
+                    <div class="card-content">
+                      <h3>'Deu branco'</h3>
+                      <p>Por que esquecer é uma função normal da memória - e quando se deve ficar preocupado</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          <section class="btn-container">
+            <button class="btn-voltar" onclick="voltarPaginaAnterior()">Voltar</button>
+          </section>
+
+          <section class="inscrever-container">
+            <h2>Inscreva-se para receber as últimas notícias</h2>
+            <div class="inscrever-form">
+              <input
+                type="email"
+                id="emailInput"
+                class="email-input inscrever-form email-input-style"
+                placeholder="Digite seu e-mail"
+              />
+    
+              <button class="btn-white" onclick="validarEmail()">
+                Inscrever
+              </button>
+    
+              <div id="mensagem"></div>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <div class="footer-container">
+              <div class="footer-logo-container">
+                  <img class="footer-logo" src="../assets/logo-footer.svg" alt="Logo">
+              </div>
+              <div class="footer-links">
+                  <ul>
+                      <li class="footer-titulo"><strong>Notícias</strong></li>
+                      <li><a href="/news/pages/tecnologia.html">Tecnologia</a></li>
+                      <li><a href="#games">Games</a></li>
+                      <li><a href="#economia">Economia</a></li>
+                      <li><a href="#esportes">Esportes</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="scroll-to-top">
+            <a href="#top">
+              <span class="material-symbols-outlined">keyboard_arrow_up</span>
+            </a>
+          </div>
+        </footer>
+        <section class="modais">
+          <div
+            class="modal-sm modal-sombra"
+            id="modalInformeEmail"
+            style="display: none"
+          >
+            <div class="modal-sm-container">
+              Por favor, informe seu e-mail.
+              <button
+                class="btn-white"
+                onclick="esconderModal('modalInformeEmail')"
+              >
+                Fechar
+              </button>
+            </div>
+          </div>
+          <div id="modalSombra" class="modal-sombra" onclick="fecharModal()"></div>
+          <div
+            class="modal-sm modal-sombra"
+            id="modalSucesso"
+            style="display: none"
+          >
+            <div class="modal-sm-container">
+              Inscrito com sucesso!
+              <button class="btn-white" onclick="esconderModal('modalSucesso')">
+                OK
+              </button>
+            </div>
+          </div>
+          <div
+            class="modal-sm modal-sombra"
+            id="modalConfirmacao"
+            style="display: none"
+          >
+            <div class="modal-sm-container">
+              <div>Deseja realmente se inscrever?</div>
+              <div class="btn-sm-container">
+                <button
+                  class="btn-confirmar btn-red"
+                  onclick="confirmarInscricao()"
+                >
+                  Sim
+                </button>
+                <button
+                  class="btn-cancelar btn-white"
+                  onclick="esconderModal('modalConfirmacao')"
+                >
+                  Cancelar
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <script src="../script.js"></script>
+  </body>
+</html>
